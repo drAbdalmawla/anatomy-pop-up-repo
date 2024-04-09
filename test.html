@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> test </title>
+</head>
+<body>
+    <div class="container"></div>
+    <script src="data/jquery.js"></script>
+<script>
+let $$ = e => document.createElement(e) ;
+let s =  e => document.querySelector(e) ;
+
+let code = `alert('in the name of Allah');`;
+let f = new Function( code ) ;
+f() ;
+
+$(function() {
+    $.getJSON('data/data.json' , function(data){
+        function myf( obj ) {
+            let ul = $$('ul') ;
+            for(let item in obj) {
+                let li = document.createElement('li') ;
+                let label = $$('label');
+                    label.textContent = item ;
+                let checkbox = $$('input') ;
+                    checkbox.type  = 'checkbox' ;
+                    checkbox.name  = item ;
+                    checkbox.value = item
+
+                label.insertBefore( checkbox , label.firstChild ) ;
+                li.appendChild( label ) ;
+                ul.appendChild( li );
+                
+                if( obj[item].constructor.name == 'Object' ) { 
+                    li.appendChild( myf( obj[item] ) ) 
+                } ;
+
+            }
+            $('.container').append( ul ) ;
+            return ul ;
+        }
+        myf( data ) ;
+
+        
+    });
+})
+
+/*
+    <ul>
+        <li>
+            <label>
+                <input />
+*/
+
+</script>
+</body>
+</html>

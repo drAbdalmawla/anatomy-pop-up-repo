@@ -1,0 +1,232 @@
+
+/*
+    main
+        .container
+            .background
+                nav (20% h)
+                    setting btn
+                    dark mode btn
+                .question_container (80% h)
+                    card (90% w) 
+                        .question_text
+                        .answer
+                            4 x .choice
+                                input[type=radio]
+                                label
+                    a[link='answerform'] (10% w) 
+                        "ok" btn[type=submit form='answer_form']
+            .selection
+                .container_logo-and-question_style
+                    .logo
+                    .question_style
+                        .question_style_setting
+                .what_is_wanted
+                    {nested_checkbox}
+                    |__> ul
+                            li
+                                label
+                                    input[type=checkbox]
+*/
+
+/*
+ * blocks of code
+ _______________________________
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ _______________________________
+ 
+*/
+
+:root {
+    --theme : greenyellow ; /* js */
+    --theme-complementary : #eff5ee ; /* js */
+    --selection-height: 60% ; /* js */
+    --nav-btn-size: 40px ; /* js */
+    --logo-size: 100px ; /* js */
+    --question_container-height : 80% ;
+    --question-card-width: 90% ;
+    --what_is_wanted-height : 70% ;
+}
+
+* {
+    /* padding: 0 ; */
+    /* margin: 0 ; */
+    -ms-overflow-style: none ;
+    scrollbar-width: none ;
+    box-sizing: border-box ;
+    font-family: 'Courier New', Courier, monospace ;
+    /* font-weight: bold; */
+}
+
+*::-webkit-scrollbar {
+    display: none ;
+}
+
+main {
+    width: 100% ;
+    height: 100vh ;
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main .container {
+    width: 90% ;
+    height: 100% ;
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--theme);
+}
+
+main .container .background {
+    width: 100% ;
+    height: calc( 100% - var(--selection-height) )  ;
+    background-color: var(--theme);
+
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main .container .background nav {
+    width: 100% ;
+    height: calc( 100% - var(--question_container-height) ) ;
+    display: flex ;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .container .background nav button {
+    width: var(--nav-btn-size) ;
+    height: var(--nav-btn-size) ;
+    margin: 10px ;
+    background-color: var(--theme-complementary);
+    border: 1px solid ;
+    border-radius: 50% ;
+    font-size: 30px;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+}
+
+main .container .background .question_container {
+    width: 100% ;
+    height: var(--question_container-height) ;
+    padding: 5px 20px;
+    font-weight: bold;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+}
+
+main .container .background .question_container .card {
+    height: 100% ;
+    width: var(--question-card-width) ;
+}
+
+main .container .background .question_container .card .answer {
+    display: flex ;
+    flex-direction: column ;
+    max-height: 90%;
+    overflow-y: scroll;
+
+}
+
+main .container .background .question_container .card .answer .choice {
+    margin: 5px ;
+    border-bottom: 1px solid;
+    
+}
+
+main .container .background .question_container a {
+    height: 100% ;
+    width: calc( 100% -  var(--question-card-width) ) ;
+}
+
+main .container .background .question_container a .ok {
+    height: 100% ;
+    width: 100% ;
+    background-color: var(--theme-complementary);
+    border: 3px solid black;
+    border-radius: 20px ;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+
+main .container .selection {
+    width: 100% ;
+    height: var(--selection-height) ;
+    position: relative ;
+    bottom: 0 ;
+
+    background-color: var(--theme-complementary);
+    border-radius: 30px 30px 0 0 ;
+    border: 1px solid ;
+
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .container .selection .what_is_wanted {
+    overflow-y: scroll;
+}
+main .container .selection .what_is_wanted ul {
+    list-style-type: none;
+}
+
+main .container .selection .what_is_wanted ul li input[type=checkbox] {
+    transform: scale( 1.5);
+    margin-right: 10px ;
+}
+
+main .container .selection .container_logo-and-question_style {
+    width: 100% ;
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main .container .selection .container_logo-and-question_style .logo {
+    width: var(--logo-size) ;
+    height: var(--logo-size) ;
+    border-radius: 50% ;
+    margin-top: 50px ;
+    background-color: var(--theme);
+    box-shadow: inset -1px 1px 10px #272727;
+
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main .container .selection .container_logo-and-question_style .logo .img {
+    object-fit: auto;
+    object-position: center;
+    width: 100%;
+    max-width: 85px;
+  }
+
+main .container .selection .container_logo-and-question_style .question_style {
+    margin: 20px 0 0 0 ;
+}
+
+main .container .selection .container_logo-and-question_style .question_style .question_style_setting {
+    color: var(--theme);
+    filter: brightness(50%);
+    font-weight: bolder;
+}
+
+main .container .selection .what_is_wanted {
+    width: 100% ;
+    height: var(--what_is_wanted-height) ;
+    border: 1px solid;
+}
