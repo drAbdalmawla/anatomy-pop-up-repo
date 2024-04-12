@@ -1,0 +1,82 @@
+{
+    "lower_limb": {
+      "muscle" : {
+        "thigh": {
+          "anterior_compartment": [
+    
+            {
+              "name": "sartoris",
+              "origin": "anterior superior iliac spine",
+              "insertion": "upper medial part of tibia",
+              "nerve": "femoral",
+              "action": [
+                "flexion in hip",
+                "abduction in hip",
+                "lateral rotation in hip",
+                "flexion in knee"
+                ]
+            }, {
+              "name": "quadriceps",
+              "origin": {
+                "rectus femoris" : {
+                  "straight head": "anterior inferior iliac spine",
+                  "reflected head": "just above acetabulum"
+                },
+                "vastus lateralis": ["greater trochanter", "lateral lip of linea aspera"],
+                "vastus intermedius": "anterior and lateral aspect of shaft of femur",
+                "vastus medialis": ["inter-trochantric line", "medial lip of linea aspera"] 
+              },
+              "insertion": "tibial tuberosity",
+              "nerve": "femoral",
+              "action": {
+                "rectus femoris": [
+                  "flexion in hip",
+                  "extention in knee"
+                  ],
+                "vastus lateralis": ["extention in knee", "steady patella in its position"],
+                "vastus intermedius": ["extention in knee", "steady patella in its position"],
+                "vastus medialis": ["extention in knee", "steady patella in its position (particularly)"]
+              }
+            }
+    
+    
+          ] ,
+          "medial_compartment" : [
+            { 
+              "name" : "adductor longus" ,
+              "origin" : "immediately below pubic tuberosity (or) external surface of body of pubis" ,
+              "insertion" : "meddle 1/3 of linea aspera"
+            } ,
+            { 
+              "name" : "adductor brevis" ,
+              "origin" : "lower 1/2 of body of pubis" ,
+              "insertion" : ["lower 1/2 of femoral pectineal line" , "upper 1/3 of linea aspera"]
+            } 
+          ] ,
+          "posterior_compartment" : [
+            { 
+              "name" : "semi-tendinosus" ,
+              "origin" : "lower medial part of ischial tuberosity" ,
+              "insertion" : "upper medial part of tibia"
+            } ,
+            { 
+              "name" : "semi-membranosus" ,
+              "origin" : "upper lateral part of ischial tuberosity" ,
+              "insertion" : "groove (after its name) in medial tibial condyle" 
+            } ,
+            { 
+              "name" : "biceps femoris" ,
+              "origin" : {
+                "long" : "!lower medial part of ischial tuberosity (or) infero-medial ischial tuberosity" ,
+                "short" : "!lateral lip of linea aspera"
+              },
+              "insertion" : "styloid process of fibula"
+            
+            } 
+          ]
+        }
+      } 
+      
+  
+  }
+}

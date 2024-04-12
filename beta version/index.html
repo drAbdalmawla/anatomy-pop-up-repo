@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Anatomy Pop-up </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!--
+    main
+        .container
+            background
+                nav
+                    setting btn
+                    dark mode btn
+                div.question_container
+                    (90%) card
+                        .question_text
+                        .answer
+                    (10%) "ok" btn
+            selection
+                logo
+                Question_style
+                what_is_wanted
+                    nested_checkbox
+-->
+
+<main>
+    <div class="container">
+        <div class="background">
+            <nav>
+                <button class="setting"> <span class="icon"><!--&#9881;--> S </span> </button>
+                <button class="dark_mode"> <span class="icon"> ● </span> </button>
+            </nav>
+            <div class="question_container">
+              <!--
+                <div class="card">
+                    <div class="question_text">insertion of sartorius</div>
+                    <form class="answer" id="answer_form">
+                        <div class="choice"><input type="radio" id="choice1" name="final_answer" value="1"/><label for="choice1"> choice 1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, illo. </label></div>
+                        <div class="choice"><input type="radio" id="choice2" name="final_answer" value="2"/><label for="choice2"> choice 2 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, illo. </label></div>
+                        <div class="choice"><input type="radio" id="choice3" name="final_answer" value="3"/><label for="choice3"> choice 3 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, illo. </label></div>
+                        <div class="choice"><input type="radio" id="choice4" name="final_answer" value="4"/><label for="choice4"> choice 4 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, illo. </label></div>
+                
+                        
+                        
+                    </form>
+                </div>
+                <a href="answer_form">
+                    <button type="submit" form="answer_form" class="ok">Ok</button>
+                </a>
+              -->
+              
+              <div class="flash_card">
+                <div class="question_card">
+                  select some thing
+                </div>
+                <div class="answer_card">
+                  <div class="content">select some thing</div>
+                  <button class="next"> Next </button>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="selection">
+            <div class="container_logo-and-question_style">
+                <div class="logo">
+                    <img
+                        loading="lazy"
+                        srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/e334c9c5f6263be660112746dae2cc1c1677bbf8b06fff858750d2209ad505f4?apiKey=ce1f08cb865b466582738e147bc68109&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/e334c9c5f6263be660112746dae2cc1c1677bbf8b06fff858750d2209ad505f4?apiKey=ce1f08cb865b466582738e147bc68109&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/e334c9c5f6263be660112746dae2cc1c1677bbf8b06fff858750d2209ad505f4?apiKey=ce1f08cb865b466582738e147bc68109&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/e334c9c5f6263be660112746dae2cc1c1677bbf8b06fff858750d2209ad505f4?apiKey=ce1f08cb865b466582738e147bc68109&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/e334c9c5f6263be660112746dae2cc1c1677bbf8b06fff858750d2209ad505f4?apiKey=ce1f08cb865b466582738e147bc68109&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/e334c9c5f6263be660112746dae2cc1c1677bbf8b06fff858750d2209ad505f4?apiKey=ce1f08cb865b466582738e147bc68109&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/e334c9c5f6263be660112746dae2cc1c1677bbf8b06fff858750d2209ad505f4?apiKey=ce1f08cb865b466582738e147bc68109&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/e334c9c5f6263be660112746dae2cc1c1677bbf8b06fff858750d2209ad505f4?apiKey=ce1f08cb865b466582738e147bc68109&"
+                        class="img"
+                        />
+                </div>
+                <div class="question_style"> Question style is <br> (<span class="question_style_setting">flash cards</span>) </div>    
+            </div>
+            <div class="what_is_wanted"></div>
+        </div>
+    </div>
+</main>
+ 
+
+
+<script src="data/jquery.js"></script>
+<script src="main.js"></script>
+<script src="style.js"></script>
+</body>
+</html>

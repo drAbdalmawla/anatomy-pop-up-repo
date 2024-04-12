@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> test </title>
+<style>
+body {
+  background-color: black ;
+  color: antiquewhite ;
+  font-weight: bold ;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+      <ul>
+        <li class="fli"> item 1 </li>
+        <li> item 2 </li>
+        <li> item 3 </li>
+        <div>
+          <li class="foli">
+            <ul>
+              <li> sub item 1 </li>
+              <li> sub item 2 </li>
+              <li> sub item 3 </li>
+            </ul>
+          </li>
+        </div>
+      </ul>
+    </div>
+<script src="data/jquery.js"></script>
+<script>
+let $$ = e => document.createElement(e) ;
+let s =  e => document.querySelector(e) ;
+
+$(function() {
+  $.getJSON('data/data.json' ,  (data) => {
+   
+  })
+});
+
+let x = document.querySelector('.foli').closest('ul').querySelectorAll('li') ;
+console.log( x )
+
+
+</script>
+</body>
+</html>
